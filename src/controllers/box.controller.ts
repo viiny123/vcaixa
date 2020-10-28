@@ -11,7 +11,7 @@ class BoxController {
   public async create (req: Request, res: Response): Promise<Response> {
     const box = await Box.create(req.body)
 
-    return res.json(box)
+    return res.status(201).json(box)
   }
 }
 
