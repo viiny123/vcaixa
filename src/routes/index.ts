@@ -1,8 +1,8 @@
 import { Router } from 'express'
-import boxRouter from './box.routes'
+import userRouter from './user.routes'
 
 const routes = Router()
 
-routes.use('/box', boxRouter)
+routes.use('/user', userRouter)
 
 export default routes
