@@ -6,4 +6,4 @@ const User = new Schema({
   email: String
 })
 
-export default model<UserModel>('User', User)
+export default model<UserModel>('user', User)

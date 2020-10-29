@@ -4,6 +4,7 @@ import User from '../schemas/user.schema'
 class UserController {
   public async index (req: Request, res: Response): Promise<Response> {
     const users = await User.find()
+
     return res.status(200).json(users)
   }
 
