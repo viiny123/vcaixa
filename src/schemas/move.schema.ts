@@ -1,12 +1,11 @@
 import { Schema, model } from 'mongoose'
-import { CashType } from '../models/enums/cash-type.enum'
 import { MoveModel } from '../models/move.model'
-import categorySchema from './category.schema'
 
 const Move = new Schema({
+  cashId: String,
   date: Date,
-  category: categorySchema,
-  type: CashType,
+  categoryId: String,
+  type: { type: String, enum: ['input', 'exit'] },
   value: Number,
   description: String
 })

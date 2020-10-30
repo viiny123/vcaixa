@@ -1,11 +1,11 @@
 import { Document } from 'mongoose'
-import { CategoryModel } from './category.model'
-import { CashType } from './enums/cash-type.enum'
+import { MoveType } from './enums/move-type.enum'
 
 export interface MoveModel extends Document {
+    cashId: string
     date: Date
-    category: CategoryModel
-    type: CashType
+    categoryId: string
+    type: MoveType
     value: number
     description: string
 }

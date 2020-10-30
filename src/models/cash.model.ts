@@ -1,7 +1,7 @@
 import { Document } from 'mongoose'
-import { MoveModel } from './move.model'
+import { CashStatus } from './enums/cash-status.enum'
 
 export interface CashModel extends Document{
-    totalBalance: number,
-    moves: MoveModel[]
+    date: Date,
+    status: CashStatus
 }

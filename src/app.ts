@@ -22,7 +22,8 @@ export class App {
   private database (): void {
     mongoose.connect('mongodb+srv://sysadmin:a3fm2wfd@cluster0.m5sra.mongodb.net/TecnoSpeed?retryWrites=true&w=majority', {
       useNewUrlParser: true,
-      useUnifiedTopology: true
+      useUnifiedTopology: true,
+      useFindAndModify: false
     })
   }
 
