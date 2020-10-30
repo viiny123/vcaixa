@@ -11,7 +11,6 @@ export class App {
     this.middlewares()
     this.database()
     this.routes()
-    this.configureJson()
   }
 
   private middlewares (): void {
@@ -29,10 +28,6 @@ export class App {
 
   private routes (): void {
     this.express.use(routes)
-  }
-
-  private configureJson (): void {
-    this.express.use(express.json())
   }
 }
 
